@@ -1,0 +1,18 @@
+// Tests parity of numbers.
+def isEven(number: Int) = number % 2 == 0
+def isOdd(number: Int) = !isEven(number)
+
+// Generate even numbers.
+println("Filter even")
+val evens = Seq.range(0, 10).filter(isEven(_))
+println(evens)
+
+// Generate odd numbers.
+println("Filter odd")
+val odds = Seq.range(0, 10).filter(isOdd(_))
+println(odds)
+
+// Another way to get odd numbers.
+println("Filter not even")
+val odds2 = Seq.range(0, 10).filterNot(isEven(_))
+println(odds2)
